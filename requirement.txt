@@ -1,0 +1,10 @@
+Usando terraform:
+
+- Crie uma maquina virtual EC2, instale o Nginx e coloque na pagina principal do sistema uma mensagem dizendo: Hello World! <IP DO SERVIDOR>
+- Essa instancia EC2 tem que fazer parte de um autoscaling group de no minimo 1 maquina e maximo 3
+- Tipo da instancia: t3.nano
+- Usar um Application Load Balancer para redirecionar o trafego para todas as instancias.
+
+Resultado esperado:
+
+Rodando o comando 'curl -i http://hostname-do-load-balancer.aws.etc' deve aparecer a mensagem Hello World! <ip da maquina que esta recebendo conexoes>
